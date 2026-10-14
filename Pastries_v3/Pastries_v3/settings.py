@@ -44,6 +44,7 @@ MIDDLEWARE = [
     'corsheaders.middleware.CorsMiddleware',  # Must be first
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',  # Before CSRF
+    'whitenoise.middleware.WhiteNoiseMiddleware',	
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -314,3 +315,14 @@ LOGGING = {
 FRONTEND_URL = config('FRONTEND_URL', default='http://localhost:5173')
 
 
+# ============================================
+# STORAGES
+# ============================================
+STORAGES = {
+    "default": {
+        "BACKEND": "django.core.files.storage.FileSystemStorage",
+    },
+    "staticfiles": {
+        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+    },
+}
