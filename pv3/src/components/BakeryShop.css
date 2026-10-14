@@ -1,0 +1,228 @@
+/* Add these styles to your existing BakeryShop.css */
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+
+.section-subtitle {
+  color: #666;
+  font-size: 1.125rem;
+  margin-top: 0.5rem;
+}
+
+/* Products Header */
+.products-header {
+  margin-bottom: 2rem;
+}
+
+.products-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 0.5rem;
+}
+
+.products-count {
+  color: #666;
+  font-size: 1rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.empty-state p {
+  color: #666;
+  font-size: 1.125rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Product Count in Breadcrumb */
+.breadcrumb {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1rem;
+  
+  
+
+}
+
+.breadcrumb  .back-btn{
+width: 250px;
+border-radius: 10px;
+
+}
+.breadcrumb:hover  .back-btn{
+  background-color: #f0f0f0;
+}
+
+.product-count {
+  margin-left: auto;
+  color: #666;
+  font-size: 0.875rem;
+  background: #f0f0f0;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+}
+
+/* Debug Panel */
+.debug-panel {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 0.75rem 1rem;
+  font-size: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.debug-info {
+  display: flex;
+  gap: 1rem;
+}
+
+.debug-info span {
+  padding: 0.25rem 0.5rem;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+
+.debug-actions {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.debug-btn {
+  background: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.25rem 0.75rem;
+  font-size: 0.75rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.debug-btn:hover {
+  background: #45a049;
+}
+
+/* Error Container Enhancements */
+.error-title {
+  color: #d32f2f;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.error-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+/* Shop Footer */
+.shop-footer {
+  background: white;
+  border-top: 1px solid #e0e0e0;
+  padding: 1.5rem 2rem;
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.footer-text {
+  color: #666;
+  font-size: 0.875rem;
+  margin: 0;
+}
+
+.footer-link {
+  background: none;
+  border: none;
+  color: #ff1493;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  text-decoration: underline;
+  font-size: 0.875rem;
+}
+
+.footer-link:hover {
+  color: #c71585;
+}
+
+/* Responsive Enhancements */
+@media (max-width: 768px) {
+  .breadcrumb {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+  
+  
+  .product-count {
+    margin-left: 0;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .products-header {
+    text-align: center;
+  }
+  
+  .error-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .error-actions button {
+    width: 100%;
+    max-width: 200px;
+  }
+  
+  .debug-panel {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .debug-info {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+/* Loading Animation Enhancement */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.loading-container p {
+  animation: pulse 1.5s infinite;
+}
+
+/* Cart Badge Animation */
+@keyframes bounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+.cart-badge {
+  animation: bounce 0.5s ease;
+}

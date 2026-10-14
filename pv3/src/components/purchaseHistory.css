@@ -1,0 +1,148 @@
+/* src/components/PurchaseHistory.css */
+
+/* ============================================
+   PURCHASE HISTORY COMPONENT STYLES
+   ============================================ */
+
+/* ✅ FORCE BUTTONS TO BE VISIBLE AT ALL TIMES */
+.print-btn,
+.pdf-btn {
+  display: inline-flex !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* Hover effects for print and PDF buttons */
+.print-btn:hover {
+  background-color: #e5e7eb !important;
+}
+
+.pdf-btn:hover {
+  background-color: #0f766e !important;
+}
+
+.pdf-btn:disabled {
+  opacity: 0.5 !important;
+  cursor: not-allowed !important;
+}
+
+/* Responsive adjustments for small screens */
+@media (max-width: 640px) {
+  .purchase-history-actions {
+    flex-wrap: wrap !important;
+    justify-content: center !important;
+  }
+  
+  .purchase-history-actions button {
+    flex: 1 !important;
+    min-width: 60px !important;
+    justify-content: center !important;
+  }
+  
+  .purchase-history-actions button span {
+    display: none !important;
+  }
+}
+
+/* ============================================
+   PRINT STYLES - Hide buttons when printing
+   ============================================ */
+@media print {
+  /* Hide all buttons when printing */
+  button {
+    display: none !important;
+  }
+  
+  /* But hide search and filters */
+  input, select, .filter-controls {
+    display: none !important;
+  }
+  
+  /* Reset body for printing */
+  body {
+    background: white !important;
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+  
+  /* Remove shadows */
+  .shadow-xl, .shadow-sm, .shadow-md {
+    box-shadow: none !important;
+  }
+  
+  .bg-gradient-to-br {
+    background: white !important;
+  }
+  
+  /* Keep background colors for cards */
+  .bg-gray-50 {
+    background: #f9fafb !important;
+  }
+  
+  .bg-white {
+    background: white !important;
+  }
+  
+  .bg-teal-50 {
+    background: #f0fdfa !important;
+  }
+  
+  .bg-purple-50 {
+    background: #faf5ff !important;
+  }
+  
+  .bg-blue-50 {
+    background: #eff6ff !important;
+  }
+  
+  .bg-green-50 {
+    background: #f0fdf4 !important;
+  }
+  
+  /* Keep text colors */
+  .text-teal-700 {
+    color: #0f766e !important;
+  }
+  
+  .text-purple-900 {
+    color: #581c87 !important;
+  }
+  
+  .text-blue-900 {
+    color: #1e3a8a !important;
+  }
+  
+  .text-green-900 {
+    color: #064e3b !important;
+  }
+  
+  /* Ensure content fits on page */
+  .p-4, .p-6, .p-8 {
+    padding: 8px !important;
+  }
+  
+  .space-y-4 > * + * {
+    margin-top: 8px !important;
+  }
+  
+  .space-y-6 > * + * {
+    margin-top: 12px !important;
+  }
+  
+  /* Card borders for print */
+  .border, .border-gray-200 {
+    border: 1px solid #e5e7eb !important;
+  }
+  
+  /* Ensure images are visible */
+  img {
+    max-width: 100% !important;
+    page-break-inside: avoid !important;
+  }
+  
+  /* Avoid page breaks inside purchase cards */
+  .rounded-xl {
+    page-break-inside: avoid !important;
+  }
+}
